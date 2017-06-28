@@ -3,19 +3,27 @@ Automated sikulix test scripts.
 
 Since Canvas updates their code every three weeks, the MatematikkMOOC-design risk breaking up at the same intervalls. 
 To be able to detect a breakage, we have made automated test scripts with Sikulix. They work by comparing images from a previous 
-GUI with images from the current GUI. Since the comparison is done pixelwise, screen resolution and web browser will probably 
-come into account. The first tests are made using Firefox. 
+GUI with images from the current GUI. Since the comparison is done pixelwise, screen resolution, web browser, computer type and os version can come into account. I have used
 
-1. Install http://sikulix.com/ 
-2. Add the path to where you installed sikulix to your .bash_profile by adding a line like this:
+- Screen resolution 2560x1440
+- Firefox 54.0 (64-bits)
+- MacBook Pro (Retina, 13-tommers, late 2013), Graphics Intel Iris 1536 MB
+- OSX El Capitan 10.11.6 (15G1510)
+
+To run the tests: 
+
+1. Import the test course (found in this directory) into Canvas and publish it.
+2. Add a student to the course and go to the course page as that student, using Firefox as web browser.
+3. Install http://sikulix.com/ 
+4. Add the path to where you installed sikulix to your .bash_profile by adding a line like this:
 
    export PATH=~/sikulix:$PATH
 
-3. Start Firefox and log in to Canvas.
-4. cd into the directory where the tc1.sikuli ...tcn.sikuli  test scripts are.
-5. Run the command ../runsikulix tc1 tc2 ... tcn
-6. Observe the magic and keep an eye on the text output from the scripts whether any tests fail.
+5. cd into the directory where the tc1.sikuli ...tcn.sikuli  test scripts are.
+6. Run the command ../runsikulix tc1 tc2 ... tcn
+7. Observe the magic and keep an eye on the text output from the scripts whether any tests fail.
 
+=Troubleshooting=
 In the example below, sikulix reports a mismatch between the snapshot taken in Firefox and the image 1498213743797.png. 
 
 ```Bash
