@@ -23,7 +23,7 @@ To run the tests:
 6. Run the command ../runsikulix tc1 tc2 ... tcn
 7. Observe the magic and keep an eye on the text output from the scripts whether any tests fail.
 
-=Troubleshooting=
+## Troubleshooting
 In the example below, sikulix reports a mismatch between the snapshot taken in Firefox and the image 1498213743797.png. 
 
 ```Bash
