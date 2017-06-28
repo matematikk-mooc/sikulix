@@ -12,9 +12,10 @@ GUI with images from the current GUI. Since the comparison is done pixelwise, sc
 
 To run the tests: 
 
-1. Import the test course (found in this directory) into Canvas and publish it.
+1. Import the [test course](https://github.com/matematikk-mooc/imscc/blob/master/Matematikk1/videreutdanning/modul-1-tall-og-tallforstaelse-export.imscc) into Canvas and publish it.
 2. Add a student to the course and go to the course page as that student, using Firefox as web browser.
-3. Install http://sikulix.com/ 
+3. Install http://sikulix.com/ Note that on Mac you will have to [download the latest Java JDK manually](https://www.java.com/en/download/), as the version included by Apple is too old. 
+Note that installing Java JRE is not enough, since the Java paths does not seem to be updated correctly when installing that package.
 4. Add the path to where you installed sikulix to your .bash_profile by adding a line like this:
 
    export PATH=~/sikulix:$PATH
