@@ -1,0 +1,162 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>tc6.sikuli</h2> <a href="tc6.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">print</span> <span class="str">"==="</span>
+<span class="kw">print</span> <span class="str">"TC6"</span>
+<span class="kw">print</span> <span class="str">"Mark several items as done on module page."</span>
+<span class="kw">print</span> <span class="str">"Prerequisite: TC5"</span>
+
+firefox = App.open(<span class="str">"Firefox"</span>)
+r = Region(<span class="dig">386</span>,<span class="dig">261</span>,<span class="dig">324</span>,<span class="dig">967</span>)
+r2 = Region(<span class="dig">653</span>,<span class="dig">264</span>,<span class="dig">921</span>,<span class="dig">242</span>)
+
+<span class="kw">def</span> tc6part1():
+    r.<span class="skw">click</span>(<img src="1498559617479.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498559454749.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+
+    r.<span class="skw">click</span>(<img src="1498559761107.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498559454749.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+
+    r.<span class="skw">click</span>(<img src="1498559864146.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498559454749.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+
+
+    r.<span class="skw">click</span>(<img src="1498560028777.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498559454749.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+
+    r.<span class="skw">click</span>(<img src="1498560056575.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498559454749.png" />)
+
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+    <span class="cmt">#Go to course home page to check if progress is updated.</span>
+    Region(<span class="dig">430</span>,<span class="dig">194</span>,<span class="dig">247</span>,<span class="dig">212</span>).<span class="skw">click</span>(<img src="1498560432242.png" />)
+
+    <span class="skw">wait</span>(<span class="dig">3</span>)
+    <span class="kw">assert</span> exists(<img src="1498562925840.png" />)
+
+<span class="cmt">#Go back to module page to reset to initial state.</span>
+<span class="kw">def</span> tc6part2():
+    r3 = Region(<span class="dig">429</span>,<span class="dig">468</span>,<span class="dig">101</span>,<span class="dig">183</span>)
+    r3.<span class="skw">click</span>(Pattern(<img src="1498560518303.png" />).exact())
+
+    <span class="skw">wait</span>(<span class="dig">3</span>)
+
+    r2.<span class="skw">click</span>(<img src="1498560627202.png" />)
+
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+    r.<span class="skw">click</span>(<img src="1498564614022.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498560627202.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+
+    r.<span class="skw">click</span>(<img src="1498561068950.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498560627202.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+
+    r.<span class="skw">click</span>(<img src="1498561312510.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498560627202.png" />)
+
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+
+    r.<span class="skw">click</span>(<img src="1498561374993.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+    r2.<span class="skw">click</span>(<img src="1498560627202.png" />)
+    <span class="skw">wait</span>(<span class="dig">2</span>)
+
+
+tc6part1()
+tc6part2()
+
+<span class="kw">print</span> <span class="str">"PASSED"</span>
+</pre>
+</body>
+</html>
